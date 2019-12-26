@@ -11,7 +11,6 @@
 package net.superblaubeere27.asmdelta.difference.clazz;
 
 import net.superblaubeere27.asmdelta.difference.AbstractDifference;
-import net.superblaubeere27.asmdelta.difference.VerificationException;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.tree.ClassNode;
 
@@ -29,7 +28,7 @@ public class ClassAccessDifference extends AbstractDifference {
     }
 
     @Override
-    public void apply(HashMap<String, ClassNode> classes) throws VerificationException {
+    public void apply(HashMap<String, ClassNode> classes) {
         classes.get(className).access = newAccess;
     }
 

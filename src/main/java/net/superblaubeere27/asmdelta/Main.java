@@ -14,7 +14,6 @@ import joptsimple.OptionException;
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 import net.superblaubeere27.asmdelta.difference.AbstractDifference;
-import net.superblaubeere27.asmdelta.difference.VerificationException;
 import net.superblaubeere27.asmdelta.difference.clazz.AddClassDifference;
 import org.objectweb.asm.ClassWriter;
 
@@ -30,7 +29,7 @@ public class Main {
     private static final String VERSION = "ASMDelta v1.0.0";
 
 
-    public static void main(String[] args) throws IOException, VerificationException {
+    public static void main(String[] args) throws IOException {
         OptionParser parser = new OptionParser(true);
 
         var jar1Option = parser.accepts("jar1", "The original file").withRequiredArg().ofType(File.class).required();

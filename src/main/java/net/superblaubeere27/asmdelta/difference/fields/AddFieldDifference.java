@@ -11,7 +11,6 @@
 package net.superblaubeere27.asmdelta.difference.fields;
 
 import net.superblaubeere27.asmdelta.difference.AbstractDifference;
-import net.superblaubeere27.asmdelta.difference.VerificationException;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.FieldNode;
 
@@ -29,7 +28,7 @@ public class AddFieldDifference extends AbstractDifference {
     }
 
     @Override
-    public void apply(HashMap<String, ClassNode> classes) throws VerificationException {
+    public void apply(HashMap<String, ClassNode> classes) {
         ClassNode classNode = classes.get(className);
 
         List<FieldNode> fields = classNode.fields;
